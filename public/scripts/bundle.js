@@ -4,7 +4,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var name = 'davi';
+var name = 'Mike';
 console.log(name);
 
 var Hangman = function () {
@@ -21,3 +21,6 @@ var Hangman = function () {
 
     return Hangman;
 }();
+
+var hagman = new Hangman();
+console.log(hagman.myMethod());
