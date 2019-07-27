@@ -1,4 +1,8 @@
-console.log('utilities.js');
 
-export const add = (a, b) => a + b;
-export const name = 'Davi';
+const add = (a, b) => a + b;
+const name = 'Davi';
+
+const square = (x) => x * x;
+export { add, name, square as default }
+
+
