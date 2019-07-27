@@ -1,13 +1,15 @@
-const path = require('path');
+const path = require('path')
+
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'public/scripts'),
         filename: 'bundle.js'
-    }, module: {
+    },
+    module: {
         rules: [{
             test: /\.js$/,
-            exclude: /node_module/,
+            exclude: /node_modules/,
             use: {
                 loader: 'babel-loader',
                 options: {
@@ -15,5 +17,9 @@ module.exports = {
                 }
             }
         }]
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'public'),
+        publicPath: '/scripts/'
     }
 }
